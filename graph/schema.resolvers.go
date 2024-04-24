@@ -6,8 +6,8 @@ package graph
 
 import (
 	"context"
-	"example/graph/model"
 	"fmt"
+	"gqlgen-example/graph/model"
 	"strconv"
 )
 

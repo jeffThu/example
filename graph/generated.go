@@ -7,8 +7,8 @@ import (
 	"context"
 	"embed"
 	"errors"
-	"example/graph/model"
 	"fmt"
+	"gqlgen-example/graph/model"
 	"strconv"
 	"sync"
 	"sync/atomic"
@@ -286,7 +286,7 @@ func (ec *executionContext) field_Mutation_upsertCharacter_args(ctx context.Cont
 	var arg0 model.CharacterInput
 	if tmp, ok := rawArgs["input"]; ok {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("input"))
-		arg0, err = ec.unmarshalNCharacterInput2exampleᚋgraphᚋmodelᚐCharacterInput(ctx, tmp)
+		arg0, err = ec.unmarshalNCharacterInput2gqlgenᚑexampleᚋgraphᚋmodelᚐCharacterInput(ctx, tmp)
 		if err != nil {
 			return nil, err
 		}
@@ -331,7 +331,7 @@ func (ec *executionContext) field_Query_characters_args(ctx context.Context, raw
 	var arg0 model.CliqueType
 	if tmp, ok := rawArgs["cliqueType"]; ok {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("cliqueType"))
-		arg0, err = ec.unmarshalNCliqueType2exampleᚋgraphᚋmodelᚐCliqueType(ctx, tmp)
+		arg0, err = ec.unmarshalNCliqueType2gqlgenᚑexampleᚋgraphᚋmodelᚐCliqueType(ctx, tmp)
 		if err != nil {
 			return nil, err
 		}
@@ -538,7 +538,7 @@ func (ec *executionContext) _Character_cliqueType(ctx context.Context, field gra
 	}
 	res := resTmp.(model.CliqueType)
 	fc.Result = res
-	return ec.marshalNCliqueType2exampleᚋgraphᚋmodelᚐCliqueType(ctx, field.Selections, res)
+	return ec.marshalNCliqueType2gqlgenᚑexampleᚋgraphᚋmodelᚐCliqueType(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Character_cliqueType(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -582,7 +582,7 @@ func (ec *executionContext) _Mutation_upsertCharacter(ctx context.Context, field
 	}
 	res := resTmp.(*model.Character)
 	fc.Result = res
-	return ec.marshalNCharacter2ᚖexampleᚋgraphᚋmodelᚐCharacter(ctx, field.Selections, res)
+	return ec.marshalNCharacter2ᚖgqlgenᚑexampleᚋgraphᚋmodelᚐCharacter(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Mutation_upsertCharacter(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -644,7 +644,7 @@ func (ec *executionContext) _Query_character(ctx context.Context, field graphql.
 	}
 	res := resTmp.(*model.Character)
 	fc.Result = res
-	return ec.marshalOCharacter2ᚖexampleᚋgraphᚋmodelᚐCharacter(ctx, field.Selections, res)
+	return ec.marshalOCharacter2ᚖgqlgenᚑexampleᚋgraphᚋmodelᚐCharacter(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Query_character(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -706,7 +706,7 @@ func (ec *executionContext) _Query_characters(ctx context.Context, field graphql
 	}
 	res := resTmp.([]*model.Character)
 	fc.Result = res
-	return ec.marshalOCharacter2ᚕᚖexampleᚋgraphᚋmodelᚐCharacterᚄ(ctx, field.Selections, res)
+	return ec.marshalOCharacter2ᚕᚖgqlgenᚑexampleᚋgraphᚋmodelᚐCharacterᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Query_characters(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -2682,7 +2682,7 @@ func (ec *executionContext) unmarshalInputCharacterInput(ctx context.Context, ob
 			it.IsHero = data
 		case "cliqueType":
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("cliqueType"))
-			data, err := ec.unmarshalNCliqueType2exampleᚋgraphᚋmodelᚐCliqueType(ctx, v)
+			data, err := ec.unmarshalNCliqueType2gqlgenᚑexampleᚋgraphᚋmodelᚐCliqueType(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3233,11 +3233,11 @@ func (ec *executionContext) marshalNBoolean2bool(ctx context.Context, sel ast.Se
 	return res
 }
 
-func (ec *executionContext) marshalNCharacter2exampleᚋgraphᚋmodelᚐCharacter(ctx context.Context, sel ast.SelectionSet, v model.Character) graphql.Marshaler {
+func (ec *executionContext) marshalNCharacter2gqlgenᚑexampleᚋgraphᚋmodelᚐCharacter(ctx context.Context, sel ast.SelectionSet, v model.Character) graphql.Marshaler {
 	return ec._Character(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNCharacter2ᚖexampleᚋgraphᚋmodelᚐCharacter(ctx context.Context, sel ast.SelectionSet, v *model.Character) graphql.Marshaler {
+func (ec *executionContext) marshalNCharacter2ᚖgqlgenᚑexampleᚋgraphᚋmodelᚐCharacter(ctx context.Context, sel ast.SelectionSet, v *model.Character) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -3247,18 +3247,18 @@ func (ec *executionContext) marshalNCharacter2ᚖexampleᚋgraphᚋmodelᚐChara
 	return ec._Character(ctx, sel, v)
 }
 
-func (ec *executionContext) unmarshalNCharacterInput2exampleᚋgraphᚋmodelᚐCharacterInput(ctx context.Context, v interface{}) (model.CharacterInput, error) {
+func (ec *executionContext) unmarshalNCharacterInput2gqlgenᚑexampleᚋgraphᚋmodelᚐCharacterInput(ctx context.Context, v interface{}) (model.CharacterInput, error) {
 	res, err := ec.unmarshalInputCharacterInput(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) unmarshalNCliqueType2exampleᚋgraphᚋmodelᚐCliqueType(ctx context.Context, v interface{}) (model.CliqueType, error) {
+func (ec *executionContext) unmarshalNCliqueType2gqlgenᚑexampleᚋgraphᚋmodelᚐCliqueType(ctx context.Context, v interface{}) (model.CliqueType, error) {
 	var res model.CliqueType
 	err := res.UnmarshalGQL(v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalNCliqueType2exampleᚋgraphᚋmodelᚐCliqueType(ctx context.Context, sel ast.SelectionSet, v model.CliqueType) graphql.Marshaler {
+func (ec *executionContext) marshalNCliqueType2gqlgenᚑexampleᚋgraphᚋmodelᚐCliqueType(ctx context.Context, sel ast.SelectionSet, v model.CliqueType) graphql.Marshaler {
 	return v
 }
 
@@ -3571,7 +3571,7 @@ func (ec *executionContext) marshalOBoolean2ᚖbool(ctx context.Context, sel ast
 	return res
 }
 
-func (ec *executionContext) marshalOCharacter2ᚕᚖexampleᚋgraphᚋmodelᚐCharacterᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.Character) graphql.Marshaler {
+func (ec *executionContext) marshalOCharacter2ᚕᚖgqlgenᚑexampleᚋgraphᚋmodelᚐCharacterᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.Character) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
@@ -3598,7 +3598,7 @@ func (ec *executionContext) marshalOCharacter2ᚕᚖexampleᚋgraphᚋmodelᚐCh
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNCharacter2ᚖexampleᚋgraphᚋmodelᚐCharacter(ctx, sel, v[i])
+			ret[i] = ec.marshalNCharacter2ᚖgqlgenᚑexampleᚋgraphᚋmodelᚐCharacter(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -3618,7 +3618,7 @@ func (ec *executionContext) marshalOCharacter2ᚕᚖexampleᚋgraphᚋmodelᚐCh
 	return ret
 }
 
-func (ec *executionContext) marshalOCharacter2ᚖexampleᚋgraphᚋmodelᚐCharacter(ctx context.Context, sel ast.SelectionSet, v *model.Character) graphql.Marshaler {
+func (ec *executionContext) marshalOCharacter2ᚖgqlgenᚑexampleᚋgraphᚋmodelᚐCharacter(ctx context.Context, sel ast.SelectionSet, v *model.Character) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}

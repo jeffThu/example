@@ -1,7 +1,7 @@
 package main
 
 import (
-	"example/graph"
+	"gqlgen-example/graph"
 	"log"
 	"net/http"
 	"os"

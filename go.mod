@@ -1,4 +1,4 @@
-module example
+module gqlgen-example
 
 go 1.22.0
 
